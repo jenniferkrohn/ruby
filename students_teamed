@@ -1,0 +1,36 @@
+#Write a program that splits the class into teams of 2. Even teams if everyone shows up, last team will have
+#3 if odd number.
+
+students = []
+" "
+
+#puts students
+#" " #this doing nothing at the last stage
+students.shuffle!
+#puts students
+
+#set a count
+count = 0
+num_students = students.length
+puts "\nYour teams are"
+until count == num_students
+	if num_students == 1
+		puts "#{students[0]} has to work ALONE"
+		break
+	else
+		if num_students % 2 == 1
+			if count < num_students - 3
+				puts "#{students[count]} & #{students[count+1]}"
+			else
+				puts "#{students[count]}, #{students[count+1]} & #{students[count+2]}"
+			break
+		end
+
+	else
+		puts "#{students[count]} & #{students[count+1]}"
+	end
+end
+	# increase the count
+	count += 2 #by changing from 1 to 2, increments every two students to print in pairs
+end
+

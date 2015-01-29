@@ -11,7 +11,7 @@ students.shuffle!
 #set a count
 count = 0
 
-puts "Is there someone I'm missing?"
+puts "Is there anyone I'm missing?"
 newname = gets.chomp.capitalize
 students.push(newname)
 num_students = students.length #removed - 1 b/c don't want the count? anymore
